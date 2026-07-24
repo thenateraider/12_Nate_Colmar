@@ -75,8 +75,9 @@ header {
 }
 
 .hero-right input {
+    display: block;
     width: 100%;
-    max-width: 100%;
+    max-width: none;
     padding: 8px 0;
     border: none;
     background-color: #8b8484;
@@ -142,21 +143,21 @@ button {
     .hero-container {
         flex-direction: row;
         align-items: center;
-        gap: 24px;
+    
         padding: 32px 24px;
     }
 
     .hero-pic {
-        flex: 1;
+        width: 60%;
         max-width: 60%;
         margin: 0;
     }
 
     .hero-right {
-        flex: 1;
-        max-width: 440px;
+        width: 40%;
+        max-width: 40%;
         margin: 0;
-        padding: 0;
+        padding: 24px;
     }
 
     .hero-right h1 {
@@ -170,7 +171,8 @@ button {
     }
 
     .hero-right input {
-        max-width: 230px;
+        width: 100%;
+        max-width: none;
     }
 }
 
@@ -214,12 +216,10 @@ button {
 .information-content {
     display: flex;
     flex-direction: column;
-    margin: 32px 16px 32px;
+    margin: 16px 16px 32px;
 }
 
-.information-content:first-child{
-    margin-top: 16px;
-}
+
 .information-image {
     width: 100%;
     margin-bottom: 16px;
@@ -240,7 +240,7 @@ button {
 }
 
 .content {
-    padding: 0 8px;
+    padding: 0 0 0 16px;
 }
 
 .content h2 {
@@ -268,9 +268,9 @@ button {
 @media (min-width: 768px) {
     .information {
         display: flex;
-        align-items: flex-start;
+        align-items: stretch;
         gap: 24px;
-        padding: 32px 24px;
+padding: 0 0 0px 24px;
     }
 
     .information-left {
@@ -278,6 +278,8 @@ button {
         flex: 1.2;
         max-width: 60%;
         padding: 0;
+        margin-top: 32px;
+        margin-bottom:32px;
     }
 
     .information-left h3 {
@@ -285,19 +287,27 @@ button {
     }
 
     .information-right {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
         flex: 0.8;
         max-width: 40%;
         border-left: 1px solid rgb(133, 131, 131);
 
-        
     }
 
     .information-content {
         flex-direction: row;
         align-items: center;
-        margin: 0 0 0px 0;
-
+        margin: 0;
         
+        
+    }
+    .information-content:first-child {
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+        padding: 32px 0 0 0;
     }
 
     .information-content:not(:last-child) {
@@ -306,13 +316,17 @@ button {
 
     .information-image {
         width: 35%;
-        min-width: 35%;
-        margin: 0 16px 0 0;
+
+        margin: 0 16px 0 16px;
     }
 
     .information-image .desktop-img {
-        padding:16px;
+        margin-bottom:16px;
         display: block;
+    }
+
+    .information-content:nth-child(n+2) .information-image img.desktop-img {
+        padding-top: 16px;
     }
 
     .information-image .mobile-img {
@@ -320,10 +334,159 @@ button {
     }
 
     .content {
-        padding: 0;
+        
+        width: 65%;
     }
 
     .guest {
-        background-color: #c7c7c7;
+        background-color: #e0e0e0;
     }
+}
+
+
+.course {
+    background-color: rgb(255, 255, 250);
+    display: block;
+    padding: 32px 0;
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.course h1 {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 16px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.course-flex {
+    display: block;
+    width: 100%;
+    grid-gap: 32px 32px;
+    box-sizing: border-box;
+}
+
+.course-flex .course-image, 
+.course-details p {
+    display: none;
+}
+
+.course-container {
+    background-color: rgb(255, 255, 250);
+    width: 100%;
+}
+
+.course-container img {
+    width: 100%;
+    height: auto;
+}
+
+.course-container:hover {
+    box-shadow: 0 0 20px 9px rgb(224, 222, 222);
+    cursor: pointer;
+}
+
+.course-details {
+    width: 90%;
+    margin: 8px auto;
+    color: #383838;
+}
+
+.course-details h2 {
+    background-color: #ece8e8;
+    padding: 16px 0 24px 16px;
+    margin: 0;
+}
+
+
+@media (min-width: 768px) {
+    .course {
+        background-color: #c4baba;
+        padding: 32px 72px;
+        border: none; 
+    }
+
+    .course h1 {
+        width: auto;
+        margin-bottom: 32px;
+        padding-bottom: 0;
+    }
+
+    .course-flex {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .course-flex .course-image, 
+    .course-details p {
+        display: block;
+    }
+
+    .course-details {
+        width: auto;
+        margin: 16px 16px 24px 16px;
+        color: inherit;
+    }
+
+    .course-details h2 {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .course-details p {
+        font-weight: lighter;
+        font-size: 14px;
+        margin: 8px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    border-top: 1px;
+    display: flex;
+    justify-content: space-between;
+    margin: 16px auto 32px 24px;
+}
+    .right-footer{
+        display: none;
+    }
+    .left-footer{
+        width: 90%;
+    }
+
+
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+
+@media (min-width: 768px){
+.right-footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.right-footer li{
+    margin-right: 24px;
+}
 }
