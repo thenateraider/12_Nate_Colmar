@@ -240,7 +240,7 @@ button {
 }
 
 .content {
-    padding: 0 0 0 16px;
+    padding: 0 16px 0 16px;
 }
 
 .content h2 {
@@ -483,6 +483,10 @@ article {
     display: flex;
     align-items: center;
     padding-right: 24px;
+}
+
+article h3 {
+    font-size: 1.2em;
 }
 
 article img {
