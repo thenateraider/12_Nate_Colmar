@@ -1,69 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
 
-*{
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 body {
     background-color: #fff;
-    font-family:"Google Sans", sans-serif;
+    font-family: "Google Sans", sans-serif;
 }
+
 header {
-    margin: 0 auto;
     display: flex;
-    height: 64px;
+    align-items: center;
     justify-content: space-between;
-    background-color: inherit;
+    height: 64px;
 }
 
+.leftSide,
+.rightSide {
+    display: none;
+}
 
+.mobileNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    list-style: none;
+}
 
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #c4baba;
+}
 
-    .mobileNav {
+.hero-pic {
+    width: 100%;
+}
+
+.hero-pic img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-right {
+    padding: 32px 24px 32px;
+}
+
+.hero-right h1 {
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.1;
+}
+
+.hero-right p {
+    margin-bottom: 24px;
+    font-size: 25px;
+    line-height: 1.4;
+}
+
+.hero-right input {
+    width: 100%;
+    max-width: 230px;
+    padding: 8px 0;
+    border: none;
+    background-color: #8b8484;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+@media (min-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+
+    .leftSide,
+    .rightSide {
         display: flex;
-        list-style-type: none;
-        justify-content: space-around;
         align-items: center;
-        border: 1px solid black;
-        width: 100%;
-        height: 64px;
     }
-    .rightSide,
+
     .leftSide {
-        display: none;
-    }
-@media (min-width:768px) {
-
-    .rightSide li {
-        list-style: none;
-        margin-left: 16px;
-    }
-
-    .leftSide{
-        height: 32px;
-        margin: auto;
+        margin-left: 24px;
+        cursor: pointer;
     }
 
     .leftSide li {
-        font-size: 25px;
-        list-style-type: none;
-        height: 32px;
         display: flex;
         align-items: center;
-        color: rgba(0, 0, 0,0.6)
+        height: 32px;
+        list-style: none;
+        font-size: 25px;
+        color: rgba(0, 0, 0, 0.6);
     }
 
-    .leftSide li span{
+    .leftSide li span {
         font-weight: 700;
         color: initial;
     }
 
     .rightSide {
-        display: flex;
-        text-align: right;
         justify-content: center;
         margin-right: 24px;
-        align-items: center;
+    }
+
+    .rightSide li {
+        list-style: none;
+        margin-left: 16px;
     }
 
     .rightSide a {
@@ -71,14 +122,35 @@ header {
         color: inherit;
     }
 
-    .leftSide {
-        display: flex;
-        align-items: center;
-        margin-left: 24px;
-        cursor: pointer;
-    }
-
     .mobileNav {
         display: none;
+    }
+
+    .hero-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+        padding: 32px 24px;
+    }
+
+    .hero-pic {
+        flex: 1;
+        max-width: 60%;
+    }
+
+    .hero-right {
+        flex: 1;
+        max-width: 440px;
+        padding: 0;
+    }
+
+    .hero-right h1 {
+        margin-bottom: 24px;
+        font-size: 48px;
+    }
+
+    .hero-right p {
+        margin-bottom: 24px;
+        font-size: 28px;
     }
 }
