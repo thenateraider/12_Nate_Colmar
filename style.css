@@ -345,7 +345,7 @@ padding: 0 0 0px 24px;
 
 
 .course {
-    background-color: rgb(255, 255, 250);
+
     display: block;
     padding: 32px 0;
     border: 1px solid rgb(221, 221, 221);
@@ -444,18 +444,77 @@ padding: 0 0 0px 24px;
 
 
 
+.thesis{
+
+    border-bottom: 1px solid rgb(202, 199, 199);
+}
+.thesis > h1 {
+    text-align: center;
+    padding: 32px 0 16px 0;
+    font-size: 2.5em;
+    margin: 0;
+}
+.exhibit-main{
+    display: flex;
+    width: 100%;
+}
+
+.left-column{
+    width: 60%;
+    margin: auto 24px;
+}
+
+.left-column h1{
+    margin: 24px auto 8px auto;
+}
+
+.left-column p{
+    margin-bottom: 32px;
+}
+
+.right-column{
+    width: 40%;
+}
+
+article{
+    display: flex;
+    align-items: center;
+    padding-right: 24px;
+}
+
+article img{
+    width: 35%;
+    padding: 16px;
+}
+
+article:first-child{
+    background-color: #c2acac;
+}
+article > div{
+    width: 65%;
+}
+
+video{
+    height:100%;
+    width: 100%;
+}
 
 
+@media (max-width: 768px){
+    .right-column, .video-details{
+        display: none;
+    }
 
+    .left-column{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 24px;
+    }
 
-
-
-
-
-
-
-
-
+    .thesis{
+        border: none;
+    }
+}
 footer{
     border-top: 1px;
     display: flex;
@@ -468,9 +527,6 @@ footer{
     .left-footer{
         width: 90%;
     }
-
-
-
 li{
     list-style: none;
 }
