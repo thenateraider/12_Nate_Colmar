@@ -41,6 +41,7 @@ header {
 
 .hero-pic {
     width: 100%;
+    margin: 0;
 }
 
 .hero-pic img {
@@ -50,7 +51,12 @@ header {
 }
 
 .hero-right {
-    padding: 32px 24px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 32px 16px 0 16px;
 }
 
 .hero-right h1 {
@@ -58,23 +64,30 @@ header {
     font-weight: 700;
     font-size: 40px;
     line-height: 1.1;
+    color: #383838;
 }
 
 .hero-right p {
     margin-bottom: 24px;
     font-size: 25px;
     line-height: 1.4;
+    color: #383838;
 }
 
 .hero-right input {
     width: 100%;
-    max-width: 230px;
+    max-width: 100%;
     padding: 8px 0;
     border: none;
     background-color: #8b8484;
     color: #fff;
     cursor: pointer;
     font-size: 25px;
+    margin-bottom: 32px;
+}
+button {
+    padding: 8px 0;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -90,7 +103,7 @@ header {
 
     .leftSide {
         margin-left: 24px;
-        cursor: pointer;
+        
     }
 
     .leftSide li {
@@ -104,7 +117,7 @@ header {
 
     .leftSide li span {
         font-weight: 700;
-        color: initial;
+
     }
 
     .rightSide {
@@ -119,7 +132,7 @@ header {
 
     .rightSide a {
         text-decoration: none;
-        color: inherit;
+
     }
 
     .mobileNav {
@@ -136,11 +149,13 @@ header {
     .hero-pic {
         flex: 1;
         max-width: 60%;
+        margin: 0;
     }
 
     .hero-right {
         flex: 1;
         max-width: 440px;
+        margin: 0;
         padding: 0;
     }
 
@@ -152,5 +167,163 @@ header {
     .hero-right p {
         margin-bottom: 24px;
         font-size: 28px;
+    }
+
+    .hero-right input {
+        max-width: 230px;
+    }
+}
+
+
+
+
+.information {
+    margin: 0;
+    background-color: #fff;
+}
+
+.information-left {
+    display: none;
+    padding: 16px 16px 32px;
+}
+
+.information-left img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.information-left h3 {
+    margin-bottom: 16px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #383838;
+}
+
+.information-left p {
+    color: #4a4a4a;
+    line-height: 1.5;
+}
+
+.information-right {
+    width: 100%;
+    margin: 0;
+}
+
+.information-content {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 16px 32px;
+}
+
+.information-content:first-child{
+    margin-top: 16px;
+}
+.information-image {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.information-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.information-image .desktop-img {
+    display: none;
+}
+
+.information-image .mobile-img {
+    display: block;
+}
+
+.content {
+    padding: 0 8px;
+}
+
+.content h2 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: #383838;
+}
+
+.content p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #4a4a4a;
+}
+
+.content a {
+    text-decoration: none;
+    color: #1a73e8;
+}
+
+.guest {
+    background-color: #fff;
+}
+
+@media (min-width: 768px) {
+    .information {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 32px 24px;
+    }
+
+    .information-left {
+        display: block;
+        flex: 1.2;
+        max-width: 60%;
+        padding: 0;
+    }
+
+    .information-left h3 {
+        font-size: 2rem;
+    }
+
+    .information-right {
+        flex: 0.8;
+        max-width: 40%;
+        border-left: 1px solid rgb(133, 131, 131);
+
+        
+    }
+
+    .information-content {
+        flex-direction: row;
+        align-items: center;
+        margin: 0 0 0px 0;
+
+        
+    }
+
+    .information-content:not(:last-child) {
+        border-bottom: 1px solid rgb(177, 173, 173);
+    }
+
+    .information-image {
+        width: 35%;
+        min-width: 35%;
+        margin: 0 16px 0 0;
+    }
+
+    .information-image .desktop-img {
+        padding:16px;
+        display: block;
+    }
+
+    .information-image .mobile-img {
+        display: none;
+    }
+
+    .content {
+        padding: 0;
+    }
+
+    .guest {
+        background-color: #c7c7c7;
     }
 }
